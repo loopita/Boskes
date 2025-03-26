@@ -1,5 +1,6 @@
 ---
 title: "Boskes"
+lang: es
 listing:
   contents: posts
   sort: "date desc"
