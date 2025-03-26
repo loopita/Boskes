@@ -1,8 +1,10 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Bienvenidos a los bosques"
+author: "Pita"
 date: "2025-03-23"
 categories: [news]
+---
+regeneración
 ---
 
 This is the first post in a Quarto blog. Welcome!
