@@ -1,5 +1,5 @@
 ---
-title: "Boskes"
+title: "Bosques"
 lang: es
 listing:
   contents: posts
