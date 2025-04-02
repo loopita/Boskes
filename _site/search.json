@@ -4,7 +4,7 @@
     "href": "posts/bienvenida/index.html",
     "title": "Bienvenidos a los bosques",
     "section": "",
-    "text": "regeneración\n\nThis is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "index.html",
@@ -26,5 +26,12 @@
     "title": "Regeneración",
     "section": "",
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/bienvenida/index.html#regeneración",
+    "href": "posts/bienvenida/index.html#regeneración",
+    "title": "Bienvenidos a los bosques",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   }
 ]
