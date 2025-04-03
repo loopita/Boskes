@@ -3,13 +3,13 @@ title: "Bienvenidos a los bosques"
 author: "Pita"
 date: "2025-03-23"
 image: BoskIcon.JPG
-categories: [news]
+categories: [árboles,hierbas,arbustos]
 ---
 
 ## regeneración
 
 ¡Bienvenidos! Aquí un poco sobre la salud de los bosques.
 
-![](../1-regeneracion/BoskIcon.jpg)
+![](../1-regeneracion/BoskIcon.jpg){width=300}
 
 Los bosques son más que la suma de los árboles que los distinguen,  son vecindades donde sus habitantes coinciden y comparten y se reparten en los nichos que se encuetran y también los que resultan de esta intrincada convivencia natural. Toma tiempo alcanzar la configuración "bosque"
