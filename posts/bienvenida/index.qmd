@@ -2,6 +2,7 @@
 title: "Bienvenidos a los bosques"
 author: "Pita"
 date: "2025-03-23"
+image: BoskIcon.JPG
 categories: [news]
 ---
 
