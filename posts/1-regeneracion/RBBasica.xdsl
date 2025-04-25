@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="bosque">
+			<state id="escondido" />
+			<state id="expuesto" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="composición">
+			<state id="primaria" />
+			<state id="secundaria" />
+			<parents>bosque</parents>
+			<probabilities>1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="estructura">
+			<state id="plantulas" />
+			<state id="juveniles" />
+			<state id="adultos" />
+			<parents>composición</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334 0.4545454545454545 0.4545454545454545 0.09090909090909094</probabilities>
+		</cpt>
+		<cpt id="ciclos">
+			<state id="agua" />
+			<state id="carbono" />
+			<state id="fosforo" />
+			<state id="nitrogeno" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="losOtrosOrganismos">
+			<state id="hongos" />
+			<state id="vegetal" />
+			<state id="animal" />
+			<probabilities>0 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PlantaAnimal">
+			<state id="absorcion" />
+			<state id="fijacion" />
+			<state id="herbivoria" />
+			<state id="polinizacion" />
+			<state id="dispersion" />
+			<state id="parasitismo" />
+			<probabilities>0 0 0.5 0 0.5 0</probabilities>
+		</cpt>
+		<cpt id="interacciones">
+			<state id="simbiosis" />
+			<state id="mutualismo" />
+			<state id="comensalismo" />
+			<state id="parasitismo" />
+			<probabilities>0 0 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="fenología">
+			<state id="subanual" />
+			<state id="anual" />
+			<state id="supranual" />
+			<probabilities>0.5 0 0.5</probabilities>
+		</cpt>
+		<cpt id="dispersión">
+			<state id="anemocoria" />
+			<state id="hidrocoria" />
+			<state id="zoocoria" />
+			<probabilities>0.5 0 0.5</probabilities>
+		</cpt>
+		<cpt id="polinización">
+			<state id="entomofilia" />
+			<state id="ornitofilia" />
+			<state id="quiropteroofilia" />
+			<probabilities>0.5 0 0.5</probabilities>
+		</cpt>
+		<cpt id="tamaño_del_fruto">
+			<state id="chico" />
+			<state id="mediano" />
+			<state id="grande" />
+			<probabilities>0 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="tipo_de_fruto">
+			<state id="seco" />
+			<state id="carnoso" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="especie">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="distribución">
+			<state id="nativa" />
+			<state id="exotica" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="estado_de_conservación">
+			<state id="extinto" />
+			<state id="enPeligroCritico" />
+			<state id="enPeligro" />
+			<state id="vulnerable" />
+			<state id="otros" />
+			<probabilities>0 0 0 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="especie_2">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="familia">
+			<state id="State0" />
+			<state id="State1" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.4830.0 ACADEMIC" name="Network1">
+			<node id="bosque">
+				<name>bosque</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>255 276 314 312</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="estructura">
+				<name>estructura</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>373 33 446 78</position>
+				<barchart active="true" width="128" height="80" />
+			</node>
+			<node id="composición">
+				<name>composición</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>481 263 566 316</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="ciclos">
+				<name>ciclos</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>211 89 265 122</position>
+				<barchart active="true" width="128" height="100" />
+			</node>
+			<node id="losOtrosOrganismos">
+				<name>Otros Organismos</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>299 413 353 446</position>
+				<barchart active="true" width="128" height="80" />
+			</node>
+			<node id="PlantaAnimal">
+				<name>planta-animal</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>73 212 129 247</position>
+				<barchart active="true" width="128" height="140" />
+			</node>
+			<node id="interacciones">
+				<name>interacciones</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>67 408 124 443</position>
+				<barchart active="true" width="128" height="100" />
+			</node>
+			<node id="fenología">
+				<name>fenología</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>837 76 903 117</position>
+			</node>
+			<node id="dispersión">
+				<name>dispersión</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>848 251 921 296</position>
+			</node>
+			<node id="polinización">
+				<name>polinización</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>853 359 934 409</position>
+			</node>
+			<node id="tamaño_del_fruto">
+				<name>tamaño del fruto</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>1037 68 1141 133</position>
+			</node>
+			<node id="tipo_de_fruto">
+				<name>tipo de fruto</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>1041 184 1122 234</position>
+			</node>
+			<node id="especie">
+				<name>especie</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>1071 359 1132 397</position>
+			</node>
+			<node id="distribución">
+				<name>distribución</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>1015 271 1095 321</position>
+			</node>
+			<node id="estado_de_conservación">
+				<name>estado de conservación</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>750 432 850 494</position>
+			</node>
+			<node id="especie_2">
+				<name>especie</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>611 60 672 98</position>
+			</node>
+			<node id="familia">
+				<name>familia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="10" />
+				<position>629 159 683 192</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

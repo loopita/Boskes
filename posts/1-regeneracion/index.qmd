@@ -2,12 +2,12 @@
 title: "Regeneración"
 author: "Pita"
 date: "2025-03-26"
-categories: [news, code, analysis]
-image: "image.jpg"
+categories: [noticias del imperio, mundo de Pita, árboles]
+image: "RBBosk.jpg"
 ---
 <!--Aca va lo que ya quiera-->
 This is a post with executable code.
 
 ```{r}
-1 + 1
+1 + 2
 ```
