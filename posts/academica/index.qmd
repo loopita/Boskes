@@ -1,12 +1,12 @@
 ---
-title: Quarto Academic Typst
+title: Nuevas Pizzas
 subtitle: A minimalistic Quarto + Typst template for academic writing
 author:
-  - name: Kazuharu Yanagimoto
-    email: kazuharu.yanagimoto@cemfi.edu.es
+  - name: Pita
+    email: menguadalupe@yahoo.com.mx
     orcid: 0009-0007-1967-8304
     affiliations:
-      - name: CEMFI
+      - name: Inecol
 abstract: |
   Quiero decir cosas importantes.
 thanks: |
@@ -19,6 +19,8 @@ date: today
 date-format: full
 bibliography: references.bib
 format:
+  html: default
+  docx: default
   academic-typst:
     section-numbering: "1.1.1"
 execute:
@@ -27,38 +29,69 @@ execute:
 
 This document shows a minimal example of the template. For more information, see the [full demo](https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf) and its [source](https://kazuyanagimoto.com/quarto-academic-typst/template-full.qmd).
 
-# Section as Heading Level 1
+# Datos
 
 Section numbering can be specified in the YAML `section-numbering` field as other Typst templates.
+
+
+```{r}
+#| label: datos-redlist
+#| warning: false
+
+library(stringr)
+library(flextable)
+
+pacman::p_load(Microsoft365R)
+
+# Autoriza el acceso a mi cuenta de OneDrive
+od <- get_business_onedrive()
+archivo <- "redlist.csv"
+
+# Accedo al archivo de interés
+redlist <- od$load_dataframe(archivo, show_col_type = FALSE)
+
+names(redlist) <- c("estatus", "num")
+Encoding(redlist$estatus) <-  "latin1"
+
+flextable::flextable(redlist)
+
+```
+
 
 ## Subsection as Heading Level 2
 
 You can use LaTeX math expressions:
 
 $$
-Y_{it} = \alpha_i + \lambda_t + \sum_{k \neq -1} \tau_h \{E_i + k = t\} +
-\varepsilon_{it}.
+Y_{it} = \mu_i + Status_i + \varepsilon_{it}.
 $$
-
-### Subsubsection as Heading Level 3
-
-I don't use and don't recommend using heading levels 3 and below but it works.
 
 ## Citation
 
 You can cite a reference like this [@katsushika1831] or @horst2020. Typst has some built-in citation styles. Check the [Typst documentation](https://typst.app/docs/reference/model/bibliography/#parameters-style) for more information.
+The Red List of Mexican Cloud Forest Trees
 
 # Figures and Tables
 
 ## Figures
 
-As @fig-hist-mpg shows, the caption is displayed below the figure. As a caption of the figure (`fig-cap`), I use bold text for the title and use a normal text for the description.
+Como se muestra en la Figura 1 @fig-hist-redlist shows, the caption is displayed below the figure. As a caption of the figure (`fig-cap`), I use bold text for the title and use a normal text for the description.
 
 ```{r}
-#| label: fig-hist-mpg
-#| fig-cap: "**Histogram of Miles per Gallon**. The x-axis shows the miles per gallon, and the y-axis shows the frequency."
+#| label: fig-hist-redlist
+#| fig-cap: "**Figura 1. Número de especies propias de bosques de montaña por estatus de conservación.**"
 
-hist(mtcars$mpg)
+# Create the histogram with facets
+library(ggplot2)
+
+redlist$est_ord <- factor(redlist$estatus, ordered = TRUE)
+
+ggplot(redlist, aes(x = est_ord, y = num, fill = estatus)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Número de especies propias de los bosques de montaña incluidas en la Redlist",
+       x = "Estatus de Conservación",
+       y = "num")
+
 ```
 
 ## Tables
@@ -86,11 +119,5 @@ I made this template for my working papers, so it may not be suitable for other 
 
 The figure numbering will be reset to "A.1", "A.2", etc so that it is clear that these figures are part of the appendix.
 
-```{r}
-#| label: fig-scatter-car
-#| fig-cap: "**Scatter Plot of Car Data**. The x-axis shows the weight of the car, and the y-axis shows the miles per gallon."
-
-plot(mtcars$wt, mtcars$mpg)
-```
 
 {{< pagebreak >}}
