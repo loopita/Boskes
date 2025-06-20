@@ -20,6 +20,7 @@ custom-keywords:
 date: today
 date-format: full
 bibliography: references.bib
+
 format:
   academic-typst:
     section-numbering: "1.1.1"
@@ -101,14 +102,14 @@ Section numbering can be specified in the YAML `section-numbering` field as othe
 
 ## Subsection as Heading Level 2
 
-You can use LaTeX math expressions:
+You can use LaTeX math expressions: [@dewar]
 
 $$
 Y_{it} = \alpha_i + \lambda_t + \sum_{k \neq -1} \tau_h \mathbb{1}\{E_i + k = t\} +
 \varepsilon_{it}.
 $$
 
-I choose a mathematical font which supports the indicator function $\mathbb{1}\{\cdot\}$. Currently, I use the {{< meta mathfont >}} font.
+I choose a mathematical font which supports the indicator function $\mathbb{1}\{\cdot\}$. Currently, I use the {{< meta mathfont >}} font. [@Equihua2020]
 
 ### Subsubsection as Heading Level 3
 
@@ -273,4 +274,4 @@ The section numbering will be changed to "A.1.1" in the appendix. The second sec
 
 ![**The Great Wave off Kanagawa**. A woodblock print by @katsushika1831.](img/hokusai_kanagawa.jpg){#fig-img}
 
-{{< pagebreak >}} 
+{{< pagebreak >}}

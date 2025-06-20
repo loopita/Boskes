@@ -1,20 +1,16 @@
 ---
-title: Nuevas Pizzas
-subtitle: A minimalistic Quarto + Typst template for academic writing
+title: Integridad ecosistemica
+subtitle: "" ¿Cómo son los bosques íntegros? condición ideal de los atributos ecosistemicos" 
 author:
   - name: Pita
     email: menguadalupe@yahoo.com.mx
     orcid: 0009-0007-1967-8304
     affiliations:
       - name: Inecol
-abstract: |
-  Quiero decir cosas importantes.
-thanks: |
-  You can write acknowledgements here.
 keywords:
-  - Quarto
-  - Typst
-  - format
+  - regeneración natural
+  - similitud
+  - estructura horizontal y vertical
 date: today
 date-format: full
 bibliography: references.bib
@@ -25,6 +21,32 @@ format:
     section-numbering: "1.1.1"
 execute:
   echo: false
+---      
+abstract: |
+Este ejercicio se suma a la búsqueda de un modelo mínimo que permita representar la integridad ecosistémica, un modelo aplicable a cualquier ecosistema en cualquier condición. 
+
+antecedentes:  |
+Hace décadas que se reconoce el impacto de las actividades antropogénicas en la pérdida y el deterioro de la vegetación nativa, la estructura del suelo,  la salinización de la tierra, la alteración del régimen natural de caudales, cambios en geomorfología fluvial, la calidad del agua corriente debido a intrusión las aguas subterráneas salinas a la contaminación y el enriquecimiento de nutrientes, a las descargas de aguas residuales domésticas e industriales y escorrentía urbana y agrícola y la proliferación de las plagas de plantas y animales (EPA, 1984). Sin embargo y a pesar de que nuestra comprensión sobre las relaciones causa-efecto de los ecosistemas está aumentando,  las amenazas y los efectos sobre nuestros sistemas están cambiando constantemente por lo que aún existe una incertidumbre considerable sobre cómo funciona el sistema y cómo las acciones de manejo concretas influirán en el mismo. 
+Por lo anterior, administradores de recursos naturales necesitan cada vez más herramientas para orientar las decisiones. En tales situaciones, los métodos de modelización bayesianos son vistos como herramientas de apoyo a las decisiones y serán nuestra herramienta en la definición y valoracion de integridad ecosistemica.
+En este plantemiento lo primero será definir un sistema íntegro, es un sistema, idealizado o existente, cuyos componentes estructurales, funcionales y los ciclos biogeoquímicos se mantienen en su estado "natural" (Figura 2). 
+
+![](../rb natural.jpg){width="300"}
+Modelo mínimo
+este modelo se hace generalizable al manejar el término natural como la condicion ideal, íntegra. en otras palabras, cualquier ecosistema en su estado natural se considera íntegro. 
+A continuación se escriben los supuestos que definen una condición integra:
+A)	Riqueza natural: Todas las especies que definen al sistema están presentes 
+B)	Sucesión convergente: la sucesión forestal, es promovida por la dinámica de disturbios y regeneración, es convergente cuando la composición de especies en el estrato arbóreo es semejante a la del estrato de regeneración. Por lo anterior se incluye un índice de similitud (Jaccard XXX) entre ambos estratos en el criterio de integridad y de resiliencia
+C)	Ciclo hidrológico natural: consistentes con los patrones que se han observado previamente en términos de temporalidad, duración, trayectoria, volumen 
+
+Cualquiera que sea el sistema, sea real o idealizado, el boceto de un sistema íntegro cumplen con la expresión “natural”, para todos sus atributos estructurales y funcionales. 
+
+
+Este boceto será tomado como referente de integridad i=1 y se ubica en el extremo superior del gradiente y en el límite inferior, i=0, de este gradiente de integridad cualquier sistema total y lamentablemente transformado puede ubicarse. Los cambios o transformaciones que separan a cualquier sistema de su condición íntegra dependerán de los atributos estructurales y funcionales que hayan sido vulnerados.
+
+  
+thanks: |
+  You can write acknowledgements here.
+
 ---
 
 This document shows a minimal example of the template. For more information, see the [full demo](https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf) and its [source](https://kazuyanagimoto.com/quarto-academic-typst/template-full.qmd).
@@ -85,12 +107,14 @@ Como se muestra en la Figura 1 @fig-hist-redlist shows, the caption is displayed
 library(ggplot2)
 
 redlist$est_ord <- factor(redlist$estatus, ordered = TRUE)
+levels(redlist$est_ord)
 
 ggplot(redlist, aes(x = est_ord, y = num, fill = estatus)) +
   geom_bar(stat = "identity") +
   labs(title = "Número de especies propias de los bosques de montaña incluidas en la Redlist",
        x = "Estatus de Conservación",
-       y = "num")
+       y = "num") +
+  theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.25))
 
 ```
 
